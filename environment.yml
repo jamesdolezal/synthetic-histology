@@ -1,6 +1,7 @@
 name: slideflow
 channels:
   - pytorch
+  - conda-forge
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
@@ -60,6 +61,7 @@ dependencies:
   - xz=5.2.6=h5eee18b_0
   - zlib=1.2.13=h5eee18b_0
   - zstd=1.5.2=ha4553b6_0
+  - pip=22.3.1
   - pip:
     - absl-py==1.3.0
     - affine==2.3.1
