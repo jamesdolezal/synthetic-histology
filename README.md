@@ -6,7 +6,7 @@ This repository is an accompaniment to the manuscript "Artificial Intelligence G
 
 ## Requirements
 - Python >= 3.8
-- Slideflow == 1.3.1
+- Slideflow == 1.3.2
 - Tensorflow >= 2.7.0
 - PyTorch >= 1.10.0
 
