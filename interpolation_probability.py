@@ -126,6 +126,7 @@ def main(
     })
 
     # Plot.
+    plt.clf()
     plt.grid(visible=True, which='both', axis='both', color='white')
     plt.gca().set_facecolor('#EAEAF2')
     sns.lineplot(x='iteration', y='pred', ci="sd", data=prob_df)
