@@ -1,4 +1,4 @@
-# histologic-sheep
+# Artificial Intelligence Generates Xenohistologic Representations of Cancer for Explainability and Education
 
 ## Disclaimer
 
