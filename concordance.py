@@ -57,7 +57,7 @@ def main(
     seeds,
     start,
     end,
-    trunc,
+    truncation_psi,
     noise_mode
 ):
     """Determine classifier concordance for some seeds."""
@@ -71,7 +71,7 @@ def main(
         target_um=classifier_cfg['tile_um'],
         start=start,
         end=end,
-        truncation_psi=trunc,
+        truncation_psi=truncation_psi,
         noise_mode=noise_mode,
         device=device
     )

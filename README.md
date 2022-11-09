@@ -5,8 +5,9 @@
 This repository is an accompaniment to the manuscript "Artificial Intelligence Generates Xenohistologic Representations of Cancer for Explainability and Education", which is under review. This repository may change as a result of the peer review process.
 
 ## Requirements
+- **Operating system**: Testing has been performed on Ubuntu 20.04, 22.04, and CentOS 8 Stream.
 - Python >= 3.8
-- Slideflow == 1.3.1
+- Slideflow == 1.3.2
 - Tensorflow >= 2.7.0
 - PyTorch >= 1.10.0
 
