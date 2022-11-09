@@ -10,8 +10,7 @@ import slideflow as sf
 from os.path import join, exists, basename
 from typing import List, Any, Dict, Optional
 from tqdm import tqdm
-from slideflow.test.utils import download_from_tcga
-from slideflow.util import path_to_name
+from slideflow.util import download_from_tcga
 
 # -----------------------------------------------------------------------------
 
@@ -80,10 +79,20 @@ def verify_md5(
     return failed_md5
 
 
+def resolve_relative_paths(cfg: EasyDict, path: str) -> EasyDict:
+    """Convert relative paths into absolute paths."""
+
+    if exists(join(path, cfg.annotations)):
+        cfg.annotations = join(path, cfg.annotations)
+    if exists(join(path, cfg.rois)):
+        cfg.rois = join(path, cfg.rois)
+    return cfg
+
+
 def create_project(path: str, cfg: EasyDict) -> sf.Project:
     """Setup a project at the given directory using a given configuration."""
-    shutil.copy(cfg.annotations, path)
     P = sf.Project(path, annotations=join(path, basename(cfg.annotations)))
+    shutil.copy(cfg.annotations, path)
     P.add_source(
         cfg.name,
         slides=join(path, 'slides'),

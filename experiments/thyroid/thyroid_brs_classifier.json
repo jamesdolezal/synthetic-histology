@@ -1,7 +1,7 @@
 {
     "name": "TCGA_THCA",
-    "annotations": "experiments/thyroid_labels.csv",
-    "rois": "experiments/thyroid_rois.tar.gz",
+    "annotations": "./thyroid_labels.csv",
+    "rois": "./thyroid_rois.tar.gz",
     "outcome": "brs",
     "backend": "tensorflow",
     "tile_px": 299,

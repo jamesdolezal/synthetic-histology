@@ -1,7 +1,7 @@
 {
     "name": "TCGA_BRCA",
-    "annotations": "experiments/breast_labels.csv",
-    "rois": "experiments/breast_rois.tar.gz",
+    "annotations": "./breast_labels.csv",
+    "rois": "./breast_rois.tar.gz",
     "outcome": "ER_Status_By_IHC",
     "tile_px": 512,
     "tile_um": 400,

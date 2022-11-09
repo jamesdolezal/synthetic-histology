@@ -3,7 +3,8 @@
 import click
 import slideflow as sf
 
-from utils import prepare_project, EasyDict
+from os.path import abspath, dirname
+from utils import prepare_project, resolve_relative_paths, EasyDict
 
 # -----------------------------------------------------------------------------
 
@@ -19,6 +20,7 @@ def main(outdir, exp, download, md5):
 
     # Load experiment configuration.
     cfg = EasyDict(sf.util.load_json(exp))
+    cfg = resolve_relative_paths(cfg, dirname(exp))
     if outdir is None:
         outdir = abspath(cfg.name)
     P = prepare_project(outdir, cfg=cfg, md5=md5, download=download)

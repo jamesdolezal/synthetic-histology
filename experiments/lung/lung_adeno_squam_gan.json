@@ -1,7 +1,7 @@
 {
     "name": "TCGA_LUNG",
-    "annotations": "experiments/lung_labels.csv",
-    "rois": "experiments/lung_rois.tar.gz",
+    "annotations": "./lung_labels.csv",
+    "rois": "./lung_rois.tar.gz",
     "outcome": "subtype",
     "tile_px": 512,
     "tile_um": 400,
