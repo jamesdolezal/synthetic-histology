@@ -100,7 +100,7 @@ Additional options can be seen by running ``concordance.py --help``.
 
 ## Generating Class-Blended Images
 
-Class blending can be performed with ``interpolate.py``, creating side-by-side images during interpolation, saving images separately, or merging into a video. For example, to create a video interpolation for seed=0 using the Thyroid GAN:
+Class blending can be performed with ``interpolate.py``, creating side-by-side images during interpolation, saving images separately, or merging into a video. For example, to create a video interpolation for seed=0 using the Thyroid GAN, starting from class 0 (BRAF-like) and ending with class 1 (RAS-like):
 
 ```
 python3 interpolate.py
@@ -109,6 +109,8 @@ python3 interpolate.py
     --outdir=/some/path
     --video=True
     --steps=100
+    --start=0
+    --end=1
 ```
 
 Additional options can be seen by running ``interpolate.py --help``.
