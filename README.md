@@ -1,5 +1,9 @@
 # histologic-sheep
 
+## Disclaimer
+
+This repository is an accompaniment to the manuscript "Artificial Intelligence Generates Xenohistologic Representations of Cancer for Explainability and Education", which is under review. This repository may change as a result of the peer review process. 
+
 ## Requirements
 - Python >= 3.8
 - Slideflow == 1.3.1
