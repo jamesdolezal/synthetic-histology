@@ -1,8 +1,8 @@
-# Artificial Intelligence Generates Xenohistologic Representations of Cancer for Explainability and Education
+# Deep Learning Generates Xenohistologic Representations of Cancer for Explainability and Education
 
 ## Disclaimer
 
-This repository is an accompaniment to the manuscript "Artificial Intelligence Generates Xenohistologic Representations of Cancer for Explainability and Education", which is under review. This repository may change as a result of the peer review process.
+This repository is an accompaniment to the manuscript "Deep Learning Generates Xenohistologic Representations of Cancer for Explainability and Education", which is under review. This repository may change as a result of the peer review process.
 
 ## Requirements
 - **Operating system**: Testing has been performed on Ubuntu 20.04, 22.04, and CentOS 8 Stream.
