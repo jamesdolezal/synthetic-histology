@@ -65,9 +65,10 @@ def main(
     thresh_low,
     thresh_mid,
     thresh_high,
+    seeds,
     start,
     end,
-    trunc,
+    truncation_psi,
     noise_mode
 ):
     """Plot a probability map of classifier predictions during interpolation."""
@@ -81,7 +82,7 @@ def main(
         target_um=classifier_cfg['tile_um'],
         start=start,
         end=end,
-        truncation_psi=trunc,
+        truncation_psi=truncation_psi,
         noise_mode=noise_mode,
         device=device
     )
@@ -89,7 +90,7 @@ def main(
     # Perform classifier concordance search.
     interpolator.set_feature_model(classifier)
     df = interpolator.seed_search(
-        range(1000),
+        seeds,
         outcome_idx=outcome_idx,
         concordance_thresholds=[thresh_low, thresh_mid, thresh_high]
     )
