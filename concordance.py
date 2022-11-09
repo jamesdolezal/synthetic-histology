@@ -54,6 +54,7 @@ def main(
     thresh_low,
     thresh_mid,
     thresh_high,
+    seeds,
     start,
     end,
     trunc,
@@ -78,7 +79,7 @@ def main(
     # Perform classifier concordance search.
     interpolator.set_feature_model(classifier)
     df = interpolator.seed_search(
-        range(1000),
+        seeds,
         outcome_idx=outcome_idx,
         concordance_thresholds=[thresh_low, thresh_mid, thresh_high]
     )
