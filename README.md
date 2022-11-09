@@ -8,17 +8,17 @@
 
 ## Installation
 
-If you plan to train models from scratch, [Openslide](https://openslide.org/download/) and [Libvips](https://libvips.github.io/libvips/) version 8.9 - 8.12 must first be installed. These are not required if you plan to only use pretrained models.
-
-Finally, install the required dependencies using anaconda:
+Install the required dependencies using anaconda:
 
 ```
 conda env create -f environment.yml
 ```
 
+If you plan to train models from scratch, [Openslide](https://openslide.org/download/) and [Libvips](https://libvips.github.io/libvips/) version 8.9 - 8.12 must first be installed. These are not required if you plan to only use pretrained models.
+
 ## Pretrained Models
 
-We offer three pretrained classifiers and three pretrained cGAN models:
+We offer three pretrained classifiers and three pretrained cGAN models. GAN models are saved as ``*.pkl`` files, and classifier models are saved as Tensorflow/Keras models (a directory).
 
 - **[lung-adeno-squam-v1](https://huggingface.co/jamesdolezal/lung-adeno-squam-v1)**: Binary classification model with Xception backbone trained to predict lung adenocarcinoma (=0) vs. squamous cell carcinoma (=1).
 - **[lung-adeno-squam-gan-v1](https://huggingface.co/jamesdolezal/lung-adeno-squam-gan-v1)**: Conditional GAN (StyleGAN2) conditioned on lung adenocarcinoma (=0) vs. squamous cell carcinoma (=1).
@@ -28,7 +28,6 @@ We offer three pretrained classifiers and three pretrained cGAN models:
 - **[thyroid-brs-gan-v1](https://huggingface.co/jamesdolezal/thyroid-brs-gan-v1)**: Conditional GAN (StyleGAN2) conditioned on thyroid BRAF-like (BRS < 0) vs. RAS-like (BRS > 0)
 
 The easiest way to interface with the pretrained models is by using [Workbench](https://slideflow.dev/workbench_tools.html).
-
 
 ```
 python3 workbench.py
