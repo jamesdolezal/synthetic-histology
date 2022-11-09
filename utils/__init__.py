@@ -100,10 +100,6 @@ def create_project(path: str, cfg: EasyDict) -> sf.Project:
         tiles=join(path, 'tiles'),
         tfrecords=join(path, 'tfrecords')
     )
-    if 'rois' in cfg and cfg.rois:
-        print(f"Extracting ROIs to {join(path, 'roi')}")
-        roi_file = tarfile.open(cfg.rois)
-        roi_file.extractall(join(path, 'roi'))
     return P
 
 
@@ -122,6 +118,13 @@ def prepare_project(
     else:
         print(f"Setting up project at {path}")
         P = create_project(path, cfg=cfg)
+
+    # Set up ROIs.
+    if 'rois' in cfg and cfg.rois and not exists(join(path, 'roi')):
+        print(f"Extracting ROIs to {join(path, 'roi')}")
+        os.makedirs(join(path, 'roi'))
+        roi_file = tarfile.open(cfg.rois)
+        roi_file.extractall(join(path, 'roi'))
 
     # Read the TCGA manifest.
     try:
