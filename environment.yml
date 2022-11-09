@@ -1,4 +1,4 @@
-name: sf
+name: slideflow
 channels:
   - pytorch
   - defaults
@@ -211,4 +211,3 @@ dependencies:
     - werkzeug==2.2.2
     - wrapt==1.14.1
     - zict==2.2.0
-prefix: /home/t.cri.jdolezal/.conda/envs/sf
