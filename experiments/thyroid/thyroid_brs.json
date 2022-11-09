@@ -1,0 +1,22 @@
+{
+    "name": "TCGA_THCA",
+    "annotations": "experiments/thyroid_labels.csv",
+    "rois": "experiments/thyroid_rois.tar.gz",
+    "outcome": "brs_class",
+    "tile_px": 512,
+    "tile_um": 302,
+    "extract_kwargs": {
+        "qc": "both",
+        "grayspace_fraction": 1,
+        "roi_method": "inside",
+        "img_format": "png"
+    },
+    "gan_kwargs": {
+        "model": "stylegan3",
+        "cfg": "stylegan2",
+        "gamma": 3.2768,
+        "batch": 16,
+        "gpus": 2,
+        "kimg": 12720
+    }
+}

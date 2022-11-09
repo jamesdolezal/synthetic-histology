@@ -1,0 +1,22 @@
+{
+    "name": "TCGA_BRCA",
+    "annotations": "experiments/breast_labels.csv",
+    "rois": "experiments/breast_rois.tar.gz",
+    "outcome": "ER_Status_By_IHC",
+    "tile_px": 512,
+    "tile_um": 400,
+    "extract_kwargs": {
+        "qc": "both",
+        "grayspace_fraction": 1,
+        "roi_method": "inside",
+        "img_format": "png"
+    },
+    "gan_kwargs": {
+        "model": "stylegan3",
+        "cfg": "stylegan2",
+        "gamma": 1.6384,
+        "batch": 32,
+        "gpus": 4,
+        "kimg": 10000
+    }
+}
