@@ -49,7 +49,7 @@ def download_slides(slides: List[str], dest: str, manifest: Dict[str, str]):
     for i, slide in enumerate(to_download):
         download_from_tcga(manifest[slide+".svs"],
                            dest=dest,
-                           message=f"Downloading {i} of {len(to_download)}...")
+                           message=f"Downloading {i+1} of {len(to_download)}...")
 
 
 def verify_md5(

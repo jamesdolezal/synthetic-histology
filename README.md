@@ -12,7 +12,7 @@ Please refer to our [installation instructions](https://slideflow.dev/installati
 
 🚧 Under construction 🚧
 
-## Pretrained models
+## Pretrained Models
 
 We offer three pretrained classifiers and three pretrained cGAN models:
 
@@ -32,7 +32,7 @@ python3 workbench.py
 
 Load GAN and/or classifier models via drag-and-drop, or with File -> Load GAN or File -> Load Model. See [our guide](https://slideflow.dev/workbench_tools.html#stylegan) for more information.
 
-## Training models
+## Training Models
 
 We also provide configuration files that can be used to reproduce training of GANs and classifiers. Configuration files are available in ``./experiment/``.
 
@@ -48,3 +48,76 @@ python3 train_gan.py \
 Whole-slide images will be automatically downloaded from TCGA if the ``--download`` flag is provided. File integrity will be verified via MD5 hash is the ``--md5`` flag is provided.
 
 By default, a project folder will be created in the current working directory containing extracted tiles and saved models. This path can be overwritten with the ``--outdir`` argument. In a given project directory, classifier models will be saved in the ``./models/`` subfolder, and GAN networks will be saved in ``./gan/``.
+
+## Generating Images
+
+Generate images from a trained network pickle by using ``generate.py``. For example, to generate BRAF-like (class=0) images from the pretrained Thyroid GAN for seeds 0-100, saving results as PNG images:
+
+```
+python3 generate.py
+    --network=thyroid-brs-gan-v1.pkl
+    --seeds=0-100
+    --class=0
+    --outdir=/some/path
+    --format=png
+```
+
+Additional options can be seen by running ``generate.py --help``.
+
+## Assessing Classifier Concordance
+
+Classifier concordance can be assessed with ``concordance.py``. For example, to assess classifier concordance for seeds 0-1000 using the Thyroid model:
+
+```
+python3 concordance.py
+    --network=thyroid-brs-gan-v1.pkl
+    --classifier=/path/to/thyroid-brs-classifier-v1
+    --out=/some/path/results.csv
+    --outcome_idx=0
+    --thresh_low=-0.5
+    --thresh_mid=0
+    --thresh_high=0.5
+    --seeds=0-1000
+```
+
+Additional options can be seen by running ``concordance.py --help``.
+
+## Generating Class-Blended Images
+
+Class blending can be performed with ``interpolate.py``, creating side-by-side images during interpolation, saving images separately, or merging into a video. For example, to create a video interpolation for seed=0 using the Thyroid GAN:
+
+```
+python3 interpolate.py
+    --network=thyroid-brs-gan-v1.pkl
+    --seeds=0
+    --outdir=/some/path
+    --video=True
+    --steps=100
+```
+
+Additional options can be seen by running ``interpolate.py --help``.
+
+## Assessing Interpolation Probability
+
+To assess interpolation probability for a range of seeds and save results as a figure, use ``interpolation_probability.py``. For example:
+
+```
+python3 interpolation_probability.py
+    --network=thyroid-brs-gan-v1.pkl
+    --classifier=/path/to/thyroid-brs-classifier-v1
+    --outcome_idx=0
+    --thresh_low=-0.5
+    --thresh_mid=0
+    --thresh_high=0.5
+    --seeds=0-1000
+    --out=probability.png
+```
+## License
+
+This code is made available under the GPLv3 License and is available for non-commercial academic purposes.
+
+## Reference
+
+If you find our work useful for your research, or if you use parts of this code, please consider citing as follow:
+
+🚧 Under construction 🚧

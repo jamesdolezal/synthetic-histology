@@ -25,7 +25,6 @@ def main(outdir, exp, download, md5):
         outdir = abspath(cfg.name)
     P = prepare_project(outdir, cfg=cfg, md5=md5, download=download)
 
-
     # --- Tile extraction -----------------------------------------------------
     print("Extracting tiles...")
     dataset = P.dataset(tile_px=cfg.tile_px, tile_um=cfg.tile_um)
