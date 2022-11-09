@@ -35,7 +35,6 @@ def main(outdir, exp, download, md5):
                          f"in the {cfg.backend} backend. Switch backends by "
                          f"setting environmental variable SF_BACKEND={cfg.backend}")
     P.train(
-        dataset=dataset,
         outcomes=cfg.outcome,
         params=sf.ModelParams.from_dict(cfg.hp),
         **cfg.train_kwargs
