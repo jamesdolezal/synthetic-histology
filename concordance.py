@@ -50,6 +50,7 @@ def num_range(s: str) -> List[int]:
 @click.option('--seeds', help='List of random seeds', type=num_range, default=range(1000))
 @click.option('--start', help='Starting category for interpolation.', type=int, default=0)
 @click.option('--end',   help='Ending category for interpolation.', type=int, default=1)
+@click.option('--batch', help='Batch size', type=int, default=32)
 @click.option('--trunc', 'truncation_psi', type=float, help='Truncation psi', default=1, show_default=True)
 @click.option('--noise-mode', help='Noise mode', type=click.Choice(['const', 'random', 'none']), default='const', show_default=True)
 def main(
@@ -63,6 +64,7 @@ def main(
     seeds,
     start,
     end,
+    batch,
     truncation_psi,
     noise_mode
 ):
@@ -86,6 +88,7 @@ def main(
     interpolator.set_feature_model(classifier)
     df = interpolator.seed_search(
         seeds,
+        batch_size=batch,
         outcome_idx=outcome_idx,
         concordance_thresholds=[thresh_low, thresh_mid, thresh_high]
     )
