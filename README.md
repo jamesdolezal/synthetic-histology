@@ -2,7 +2,7 @@
 
 ## Disclaimer
 
-This repository is an accompaniment to the manuscript "Artificial Intelligence Generates Xenohistologic Representations of Cancer for Explainability and Education", which is under review. This repository may change as a result of the peer review process. 
+This repository is an accompaniment to the manuscript "Artificial Intelligence Generates Xenohistologic Representations of Cancer for Explainability and Education", which is under review. This repository may change as a result of the peer review process.
 
 ## Requirements
 - Python >= 3.8
@@ -31,14 +31,6 @@ We offer three pretrained classifiers and three pretrained cGAN models. GAN mode
 - **[thyroid-brs-v1](https://huggingface.co/jamesdolezal/thyroid-brs-v1)**: Regression model with Xception backbone trained to predict thyroid BRAF-RAS gene expression score (score from -1 to +1, where -1=BRAF-like and +1=RAS-like).
 - **[thyroid-brs-gan-v1](https://huggingface.co/jamesdolezal/thyroid-brs-gan-v1)**: Conditional GAN (StyleGAN2) conditioned on thyroid BRAF-like (BRS < 0) vs. RAS-like (BRS > 0)
 
-The easiest way to interface with the pretrained models is by using [Workbench](https://slideflow.dev/workbench_tools.html).
-
-```
-python3 workbench.py
-```
-
-Load GAN and/or classifier models via drag-and-drop, or with File -> Load GAN or File -> Load Model. See [our guide](https://slideflow.dev/workbench_tools.html#stylegan) for more information.
-
 ## Training Models
 
 We also provide configuration files that can be used to reproduce training of GANs and classifiers. Configuration files are available in ``./experiment/``.
@@ -55,6 +47,16 @@ python3 train_gan.py \
 Whole-slide images will be automatically downloaded from TCGA if the ``--download`` flag is provided. File integrity will be verified via MD5 hash is the ``--md5`` flag is provided.
 
 By default, a project folder will be created in the current working directory containing extracted tiles and saved models. This path can be overwritten with the ``--outdir`` argument. In a given project directory, classifier models will be saved in the ``./models/`` subfolder, and GAN networks will be saved in ``./gan/``.
+
+## Interactive Visualization
+
+The easiest way to interface with trained models is by using [Workbench](https://slideflow.dev/workbench_tools.html).
+
+```
+python3 workbench.py
+```
+
+Load GAN and/or classifier models via drag-and-drop, or with File -> Load GAN or File -> Load Model. This interface enables seed space navigation, class blending, and layer blending, while interactively visualizing how model predictions change. See [our guide](https://slideflow.dev/workbench_tools.html#stylegan) for more information.
 
 ## Generating Images
 
