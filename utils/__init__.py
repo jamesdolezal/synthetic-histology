@@ -98,7 +98,12 @@ def create_project(path: str, cfg: EasyDict) -> sf.Project:
     return P
 
 
-def prepare_project(path: str, cfg: EasyDict, md5: bool, download: bool) -> None:
+def prepare_project(
+    path: str,
+    cfg: EasyDict,
+    md5: bool,
+    download: bool
+) -> None:
     """Prepare a given project, downloading and verifying missing slides."""
 
     # Initialize project in out directory.
