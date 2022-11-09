@@ -6,8 +6,6 @@
 - Tensorflow >= 2.7.0
 - PyTorch >= 1.10.0
 
-Please refer to our [installation instructions](https://slideflow.dev/installation.html) for a guide to installing Slideflow and its prerequisites.
-
 ## Installation
 
 If you plan to train models from scratch, [Openslide](https://openslide.org/download/) and [Libvips](https://libvips.github.io/libvips/) version 8.9 - 8.12 must first be installed. These are not required if you plan to only use pretrained models.
