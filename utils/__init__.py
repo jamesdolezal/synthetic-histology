@@ -112,7 +112,7 @@ def prepare_project(
     cfg: EasyDict,
     md5: bool,
     download: bool
-) -> None:
+) -> sf.Project:
     """Prepare a given project, downloading and verifying missing slides."""
 
     # Initialize project in out directory.
@@ -158,3 +158,5 @@ def prepare_project(
         failed = verify_md5(slide_dest, md5_manifest)
         if failed:
             raise ValueError("MD5 verification failed.")
+
+    return P
