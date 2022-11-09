@@ -17,11 +17,11 @@ Please refer to our [installation instructions](https://slideflow.dev/installati
 We offer three pretrained classifiers and three pretrained cGAN models:
 
 - **[lung-adeno-squam-v1](https://huggingface.co/jamesdolezal/lung-adeno-squam-v1)**: Binary classification model with Xception backbone trained to predict lung adenocarcinoma (=0) vs. squamous cell carcinoma (=1).
-- **lung-adeno-squam-gan-v1**: Conditional GAN (StyleGAN2) conditioned on lung adenocarcinoma (=0) vs. squamous cell carcinoma (=1).
+- **[lung-adeno-squam-gan-v1](https://huggingface.co/jamesdolezal/lung-adeno-squam-gan-v1)**: Conditional GAN (StyleGAN2) conditioned on lung adenocarcinoma (=0) vs. squamous cell carcinoma (=1).
 - **[breast-er-v1](https://huggingface.co/jamesdolezal/breast-er-v1)**: Binary classification model with Xception backbone trained to predict breast estrogen receptor (ER) negative (=0) vs. ER-positive (=1), with ER status determined through immunohistochemical (IHC) testing.
-- **breast-er-gan-v1**: Conditional GAN (StyleGAN2) conditioned on breast ER-negative (=0) vs. ER-positive (=1).
+- **[breast-er-gan-v1](https://huggingface.co/jamesdolezal/breast-er-gan-v1)**: Conditional GAN (StyleGAN2) conditioned on breast ER-negative (=0) vs. ER-positive (=1).
 - **[thyroid-brs-v1](https://huggingface.co/jamesdolezal/thyroid-brs-v1)**: Regression model with Xception backbone trained to predict thyroid BRAF-RAS gene expression score (score from -1 to +1, where -1=BRAF-like and +1=RAS-like).
-- **thyroid-brs-gan-v1**: Conditional GAN (StyleGAN2) conditioned on thyroid BRAF-like (BRS < 0) vs. RAS-like (BRS > 0)
+- **[thyroid-brs-gan-v1](https://huggingface.co/jamesdolezal/thyroid-brs-gan-v1)**: Conditional GAN (StyleGAN2) conditioned on thyroid BRAF-like (BRS < 0) vs. RAS-like (BRS > 0)
 
 The easiest way to interface with the pretrained models is by using [Workbench](https://slideflow.dev/workbench_tools.html).
 
