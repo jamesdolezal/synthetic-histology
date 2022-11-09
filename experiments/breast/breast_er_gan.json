@@ -5,7 +5,7 @@
     "outcome": "ER_Status_By_IHC",
     "tile_px": 512,
     "tile_um": 400,
-    "extract_kwargs": {
+    "tile_kwargs": {
         "qc": "both",
         "grayspace_fraction": 1,
         "roi_method": "inside",
