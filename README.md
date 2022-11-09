@@ -10,7 +10,13 @@ Please refer to our [installation instructions](https://slideflow.dev/installati
 
 ## Installation
 
-🚧 Under construction 🚧
+If you plan to train models from scratch, [Openslide](https://openslide.org/download/) and [Libvips](https://libvips.github.io/libvips/) version 8.9 - 8.12 must first be installed. These are not required if you plan to only use pretrained models.
+
+Finally, install the required dependencies using anaconda:
+
+```
+conda env create -f environment.yml
+```
 
 ## Pretrained Models
 
