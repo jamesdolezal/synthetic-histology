@@ -1,5 +1,7 @@
 # Deep Learning Generates Xenohistologic Representations of Cancer for Explainability and Education
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7309049.svg)](https://doi.org/10.5281/zenodo.7309049)
+
 ## Disclaimer
 
 This repository is an accompaniment to the manuscript "Deep Learning Generates Xenohistologic Representations of Cancer for Explainability and Education", which is under review. This repository may change as a result of the peer review process.
@@ -138,4 +140,17 @@ This code is made available under the GPLv3 License and is available for non-com
 
 If you find our work useful for your research, or if you use parts of this code, please consider citing as follow:
 
-🚧 Under construction 🚧
+```
+@software{dolezal_james_m_2022_7309049,
+  author       = {Dolezal, James M},
+  title        = {{Histologic Sheep: Generating Xenohistologic 
+                   Representations of Cancer for Explainability and
+                   Education}},
+  month        = nov,
+  year         = 2022,
+  publisher    = {Zenodo},
+  version      = {0.0.1},
+  doi          = {10.5281/zenodo.7309049},
+  url          = {https://doi.org/10.5281/zenodo.7309049}
+}
+```
