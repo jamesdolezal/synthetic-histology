@@ -50,8 +50,8 @@ To train a model with a given configuration, use the ``train_classifier.py`` and
 
 ```
 python3 train_gan.py \
-    --exp=experiment/thyroid/thyroid_brs_gan.json
-    --download
+    --exp=experiment/thyroid/thyroid_brs_gan.json \
+    --download \
     --md5
 ```
 
@@ -74,11 +74,11 @@ Load GAN and/or classifier models via drag-and-drop, or with File -> Load GAN or
 Generate images from a trained network pickle by using ``generate.py``. For example, to generate BRAF-like (class=0) images from the pretrained Thyroid GAN for seeds 0-100, saving results as PNG images:
 
 ```
-python3 generate.py
-    --network=thyroid-brs-gan-v1.pkl
-    --seeds=0-100
-    --class=0
-    --outdir=/some/path
+python3 generate.py \
+    --network=thyroid-brs-gan-v1.pkl \
+    --seeds=0-100 \
+    --class=0 \
+    --outdir=/some/path \
     --format=png
 ```
 
@@ -89,14 +89,14 @@ Additional options can be seen by running ``generate.py --help``.
 Classifier concordance can be assessed with ``concordance.py``. For example, to assess classifier concordance for seeds 0-1000 using the Thyroid model:
 
 ```
-python3 concordance.py
-    --network=thyroid-brs-gan-v1.pkl
-    --classifier=/path/to/thyroid-brs-v1
-    --out=/some/path/results.csv
-    --outcome_idx=0
-    --thresh_low=-0.5
-    --thresh_mid=0
-    --thresh_high=0.5
+python3 concordance.py \
+    --network=thyroid-brs-gan-v1.pkl \
+    --classifier=/path/to/thyroid-brs-v1 \
+    --out=/some/path/results.csv \
+    --outcome_idx=0 \
+    --thresh_low=-0.5 \
+    --thresh_mid=0 \
+    --thresh_high=0.5 \
     --seeds=0-1000
 ```
 
@@ -107,13 +107,13 @@ Additional options can be seen by running ``concordance.py --help``.
 Class blending can be performed with ``interpolate.py``, creating side-by-side images during interpolation, saving images separately, or merging into a video. For example, to create a video interpolation for seed=0 using the Thyroid GAN, starting from class 0 (BRAF-like) and ending with class 1 (RAS-like):
 
 ```
-python3 interpolate.py
-    --network=thyroid-brs-gan-v1.pkl
-    --seeds=0
-    --outdir=/some/path
-    --video=True
-    --steps=100
-    --start=0
+python3 interpolate.py \
+    --network=thyroid-brs-gan-v1.pkl \
+    --seeds=0 \
+    --outdir=/some/path \
+    --video=True \
+    --steps=100 \
+    --start=0 \
     --end=1
 ```
 
@@ -124,14 +124,14 @@ Additional options can be seen by running ``interpolate.py --help``.
 To assess interpolation probability for a range of seeds and save results as a figure, use ``interpolation_probability.py``. For example:
 
 ```
-python3 interpolation_probability.py
-    --network=thyroid-brs-gan-v1.pkl
-    --classifier=/path/to/thyroid-brs-v1
-    --outcome_idx=0
-    --thresh_low=-0.5
-    --thresh_mid=0
-    --thresh_high=0.5
-    --seeds=0-1000
+python3 interpolation_probability.py \
+    --network=thyroid-brs-gan-v1.pkl \
+    --classifier=/path/to/thyroid-brs-v1 \
+    --outcome_idx=0 \
+    --thresh_low=-0.5 \
+    --thresh_mid=0 \
+    --thresh_high=0.5 \
+    --seeds=0-1000 \
     --out=probability.png
 ```
 ## License
