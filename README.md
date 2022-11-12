@@ -1,4 +1,4 @@
-# Deep Learning Synthesizes Histologic Representations of Cancer for Explainability and Education
+# Deep Learning Generates Synthetic Cancer Histology for Explainability and Education
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7309049.svg)](https://doi.org/10.5281/zenodo.7309049)
 
@@ -6,7 +6,7 @@ This software provides tools for generating synthetic images to assist with deep
 
 ## Disclaimer
 
-This repository is an accompaniment to the manuscript "Deep Learning Synthesizes Histologic Representations of Cancer for Explainability and Education", which is under review. This repository may change as a result of the peer review process.
+This repository is an accompaniment to the manuscript "Deep Learning Generates Synthetic Cancer Histology for Explainability and Education", which is under review. This repository may change as a result of the peer review process.
 
 ## Requirements
 - **Operating system**: Testing has been performed on Ubuntu 20.04, 22.04, and CentOS 8 Stream.
