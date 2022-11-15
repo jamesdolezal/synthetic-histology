@@ -1,7 +1,7 @@
 ![banner](https://repository-images.githubusercontent.com/563844338/4e70d155-c9f4-4f1b-8fbb-c92f1f4b36f3)
 # Deep Learning Generates Synthetic Cancer Histology for Explainability and Education
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7309049.svg)](https://doi.org/10.5281/zenodo.7309049)
+[arXiv pre-print](https://arxiv.org/abs/2211.06522) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7309049.svg)](https://doi.org/10.5281/zenodo.7309049)
 
 This software provides tools for generating synthetic images to assist with deep learning model explainability and education. Visualizations are generated with a conditional generative adversarial network (cGAN) based on the StyleGAN2 architecture, and an interactive interface is provided for navigating the cGAN latent space and performing both class and layer blending.
 
