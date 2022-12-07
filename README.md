@@ -1,4 +1,3 @@
-![banner](https://repository-images.githubusercontent.com/563844338/4e70d155-c9f4-4f1b-8fbb-c92f1f4b36f3)
 # Deep Learning Generates Synthetic Cancer Histology for Explainability and Education
 
 [arXiv pre-print](https://arxiv.org/abs/2211.06522) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7309049.svg)](https://doi.org/10.5281/zenodo.7309049)
