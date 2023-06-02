@@ -1,12 +1,8 @@
 # Deep Learning Generates Synthetic Cancer Histology for Explainability and Education
-
-[arXiv pre-print](https://arxiv.org/abs/2211.06522) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7309049.svg)](https://doi.org/10.5281/zenodo.7309049)
+![synthetic-histology-banner](https://github.com/jamesdolezal/synthetic-histology/assets/48372806/eff51b21-a596-44ff-b93e-c65bf2c9feba)
+[Manuscript](https://www.nature.com/articles/s41698-023-00399-4) | [arXiv](https://arxiv.org/abs/2211.06522) | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7309049.svg)](https://doi.org/10.5281/zenodo.7309049)
 
 This software provides tools for generating synthetic images to assist with deep learning model explainability and education. Visualizations are generated with a conditional generative adversarial network (cGAN) based on the StyleGAN2 architecture, and an interactive interface is provided for navigating the cGAN latent space and performing both class and layer blending.
-
-## Disclaimer
-
-This repository is an accompaniment to the manuscript "Deep Learning Generates Synthetic Cancer Histology for Explainability and Education", which is under review. This repository may change as a result of the peer review process.
 
 ## Requirements
 - **Operating system**: Testing has been performed on Ubuntu 20.04, 22.04, and CentOS 8 Stream.
@@ -143,16 +139,20 @@ This code is made available under the GPLv3 License and is available for non-com
 If you find our work useful for your research, or if you use parts of this code, please consider citing as follow:
 
 ```
-@software{dolezal_james_m_2022_7309049,
-  author       = {Dolezal, James M},
-  title        = {{Histologic Sheep: Generating Xenohistologic 
-                   Representations of Cancer for Explainability and
-                   Education}},
-  month        = nov,
-  year         = 2022,
-  publisher    = {Zenodo},
-  version      = {0.0.1},
-  doi          = {10.5281/zenodo.7309049},
-  url          = {https://doi.org/10.5281/zenodo.7309049}
+@Article{Dolezal2023,
+    author={Dolezal, James M. and Wolk, Rachelle and Hieromnimon, Hanna M. and Howard, Frederick M. and Srisuwananukorn, Andrew and Karpeyev, Dmitry and Ramesh, Siddhi and Kochanny, Sara and Kwon, Jung Woo and Agni, Meghana and Simon, Richard C. and Desai, Chandni and Kherallah, Raghad and Nguyen, Tung D. and Schulte, Jefree J. and Cole, Kimberly and Khramtsova, Galina and Garassino, Marina Chiara and Husain, Aliya N. and Li, Huihua and Grossman, Robert and Cipriani, Nicole A. and Pearson, Alexander T.},
+    title={Deep learning generates synthetic cancer histology for explainability and education},
+    journal={npj Precision Oncology},
+    year={2023},
+    month={May},
+    day={29},
+    volume={7},
+    number={1},
+    pages={49},
+    issn={2397-768X},
+    doi={10.1038/s41698-023-00399-4},
+    url={https://doi.org/10.1038/s41698-023-00399-4}
 }
+
+
 ```
